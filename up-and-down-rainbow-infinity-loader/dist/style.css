@@ -1,0 +1,117 @@
+body {
+  background: #111111;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.infinite {
+  width: 100px;
+  height: 200px;
+  position: relative;
+}
+.infinite div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  animation: rotate 3.5s linear infinite;
+}
+.infinite div span {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background: #ffd600;
+  bottom: -8px;
+  left: calc(50% - 8px);
+  animation: move 3.5s linear infinite;
+  font-family: sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+}
+.infinite :nth-child(2n) {
+  animation-delay: 0.25s;
+}
+.infinite :nth-child(2n) span {
+  animation-delay: 0.25s;
+}
+.infinite :nth-child(3) {
+  animation-delay: 0.5s;
+}
+.infinite :nth-child(3) span {
+  animation-delay: 0.5s;
+}
+.infinite :nth-child(4) {
+  animation-delay: 0.75s;
+}
+.infinite :nth-child(4) span {
+  animation-delay: 0.75s;
+}
+.infinite :nth-child(5) {
+  animation-delay: 1s;
+}
+.infinite :nth-child(5) span {
+  animation-delay: 1s;
+}
+.infinite :nth-child(6) {
+  animation-delay: 1.25s;
+}
+.infinite :nth-child(6) span {
+  animation-delay: 1.25s;
+}
+.infinite :nth-child(7) {
+  animation-delay: 1.5s;
+}
+.infinite :nth-child(7) span {
+  animation-delay: 1.5s;
+}
+.infinite :nth-child(8) {
+  animation-delay: 1.75s;
+}
+.infinite :nth-child(8) span {
+  animation-delay: 1.75s;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes move {
+  0%, 100% {
+    opacity: 1;
+  }
+  14.29% {
+    background: #33ff00;
+  }
+  28.57% {
+    background: #3627fe;
+  }
+  42.86% {
+    background: #4b0082;
+  }
+  57.14% {
+    background: #9922ff;
+    bottom: -8px;
+  }
+  71.43% {
+    background: #ff3311;
+  }
+  85.71% {
+    background: #ff9922;
+  }
+  100% {
+    background: #ffd600;
+    top: -8px;
+  }
+}
